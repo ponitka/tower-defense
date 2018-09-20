@@ -44,11 +44,12 @@ class Maze:
       for j in range(self.width):
         if (i % 2 == 0 and j % 2 == 0):
           if self.visited[i][j] == False:
-            rest.append([i, j])
-
-    random.shuffle(rest)
-    for pos in rest:
-      self.dfs(pos, False)
+            for d in [[0, 2], [2, 0], [0, -2], [-2, 0]]:
+              if self.inside(i + d[0], j + d[1]):
+                if self.visited[i + d[0]][j + d[1]] == True:
+                  self.array[i + d[0]//2][j + d[1]//2] = 1
+                  self.visited[i][j] = True
+                  break
   
   def dfs(self, pos, stop):
     self.visited[pos[0]][pos[1]] = 1
