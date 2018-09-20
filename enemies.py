@@ -63,14 +63,14 @@ class Enemies:
 
     self.board.bfs(z, t)
 
-    GObject.timeout_add(1000, self.NewEnemy, x, y, 1 * self.player.waves, 3)
-    GObject.timeout_add(2000, self.NewEnemy, x, y, 1 * self.player.waves, 4)
-    GObject.timeout_add(3500, self.NewEnemy, x, y, 1 * self.player.waves, 5)
+    GObject.timeout_add(1000, self.NewEnemy, x, y, 1 * self.player.waves, 3 + self.player.waves // 7)
+    GObject.timeout_add(2000, self.NewEnemy, x, y, 1 * self.player.waves, 4 + self.player.waves // 7)
+    GObject.timeout_add(3500, self.NewEnemy, x, y, 1 * self.player.waves, 5 + self.player.waves // 7)
 
     return True
 
   def Win(self, enemy):
-    self.player.budget -= enemy.cost
+    self.player.budget -= 2 * enemy.cost
     self.sidebar.update()
     self.board[enemy.pos_x][enemy.pos_y].Occupant = -1
     self.board[enemy.pos_x][enemy.pos_y].update(1, 1)
