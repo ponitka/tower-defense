@@ -54,7 +54,7 @@ class Enemies:
             possible_zt.append([self.board.dist[i][j], [i, j]])
 
     possible_zt.sort(reverse = True)
-    indx = random.randint(0, (len(possible_zt) // 3) + 1)
+    indx = random.randint(0, (len(possible_zt) // 4) + 1)
     z, t = possible_zt[indx][1][0], possible_zt[indx][1][1]
     self.aim = [z, t]
     
