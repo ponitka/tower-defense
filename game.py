@@ -17,7 +17,7 @@ class GameWindow(Gtk.Window):
     self.add(self.bigbox)
     self.label = Gtk.Label(""" Usage of towers: WASD for moving, Q for buying, arrows for changing.
     New wave comes every 15 seconds. You'll lose when your budget becomes negative.
-    By killing an enemy you earn 1$, by letting an enemy reach the star you lose 1$. """)
+    By killing an enemy you earn 1$, by letting an enemy reach the star you lose 2$. """)
     
     self.label.set_justify(Gtk.Justification.CENTER)
     self.bigbox.pack_start(self.label, True, True, 0)
