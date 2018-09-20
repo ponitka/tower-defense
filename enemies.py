@@ -63,9 +63,9 @@ class Enemies:
 
     self.board.bfs(z, t)
 
-    GObject.timeout_add(1000, self.NewEnemy, x, y, 1 * self.player.waves, 4)
-    GObject.timeout_add(2000, self.NewEnemy, x, y, 1 * self.player.waves, 8)
-    GObject.timeout_add(3500, self.NewEnemy, x, y, 1 * self.player.waves, 8)
+    GObject.timeout_add(1000, self.NewEnemy, x, y, 1 * self.player.waves, 3)
+    GObject.timeout_add(2000, self.NewEnemy, x, y, 1 * self.player.waves, 6)
+    GObject.timeout_add(3500, self.NewEnemy, x, y, 1 * self.player.waves, 6)
 
     return True
 
