@@ -20,8 +20,8 @@ class Sidebar(Gtk.Box):
     self.pack_start(self.wave_label, True, True, 0)
 
     self.towers = []
-    self.towers.append(Tower(0, 1, 2, 1))
-    self.towers.append(Tower(1, 2, 2, 2))
+    self.towers.append(Tower(0, 3, 1, 2))
+    self.towers.append(Tower(1, 2, 3, 3))
     self.towers.append(Tower(2, 3, 2, 3))
     self.towers.append(Tower(3, 6, 1, 5))
 
