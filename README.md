@@ -11,4 +11,4 @@ Game rules and controls:
   <li>Towers attributes include (in that order): range, speed and cost</li>
 </ul>
 
-To start the game run main.py in Python 3 (<code>$ python3 main.py</code>)
+To start the game run <code>main.py</code> in Python 3 (<code>$ python3 main.py</code>)
